@@ -6,10 +6,10 @@ A simple and elegant To-Do List application built using the **MERN stack** (Mong
 
 ## 🚀 Features
 
-- ✅ Create, update, and delete tasks
-- 💎 Beautiful glassmorphic UI
-- 🔔 Browser notifications (coming soon)
-- 📅 Google Calendar sync (coming soon)
+- Create, update, and delete tasks
+- Beautiful glassmorphic UI
+- Browser notifications (coming soon)
+- Google Calendar sync (coming soon)
 
 ---
 
