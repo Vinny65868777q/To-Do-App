@@ -1,16 +1,17 @@
-##To-Do List App
+# To-Do List App
 
 A simple and elegant To-Do List application built using the **MERN stack** (MongoDB, Express.js, React.js, Node.js) with real-time task management, browser notifications, and seamless Google Calendar integration.
 
 ---
 
-##Features
+## Features
 
 - Create, update, and delete tasks  
 - Beautiful glassmorphic UI  
 - Browser push notifications  
 - Google Calendar Sync — Add tasks directly to user's calendar with OAuth2 login  
-- Session-based state saves task before authentication
+- Session-based state saves task before authentication  
+
 
 ---
 
