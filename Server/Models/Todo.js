@@ -5,6 +5,16 @@ const TodoSchema = new mongoose.Schema({
     done: {
         type: Boolean,
         default: false
+    },
+    isCalendar: {
+        type: Boolean,
+        default: false,
+    },
+    dueDate: {
+        type: Date,
+         required: function () {
+      return this.isCalendar; // only required if isCalendar is true
+    },
     }
 })
 

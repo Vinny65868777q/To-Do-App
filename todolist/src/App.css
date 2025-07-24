@@ -1,100 +1,145 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to right top, #82b1e0, #ffffff);
+  font-family: 'Poppins', sans-serif;
+  background-color: #d87ff7; /* Bright purple background like the image */
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+  padding-top: 40px;
+  color: #fff;
 }
 
 .container {
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 20px;
-  padding: 40px;
-  width: 400px;
+  background: #f0f0f4; /* Light pastel background for container */
+  border-radius: 25px;
+  padding: 40px 40px 50px 40px;
+  width: 500px;
   max-width: 90vw;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 20px 70px rgba(161, 50, 254, 0.4);
+  color: #222;
 }
 
 .heading {
-  text-align: center;
-  color: #333;
-  font-size: 2rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 2.5rem;
   margin-bottom: 30px;
+  color: #3c1b95; /* Dark purple for heading text */
+  user-select: text;
 }
 
 .todo-item {
+  background: white;
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin: 15px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 12px;
-  padding: 10px 15px;
-  margin: 10px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgb(0 0 0 / 0.08);
+  cursor: default;
+  font-size: 1.1rem;
+  color: #333;
+  transition: box-shadow 0.25s ease;
 }
 
-.todo-item .checkbox {
+.todo-item:hover {
+  box-shadow: 0 8px 22px rgba(161, 50, 254, 0.4);
+}
+
+.checkbox {
   display: flex;
   align-items: center;
   cursor: pointer;
+  gap: 16px;
+  flex: 1;
 }
 
-.todo-item .checkbox p {
-  margin-left: 10px;
-  font-size: 1rem;
-  color: #222;
+.checkbox p {
+  margin: 0;
+  user-select: text;
 }
 
 .line_through {
   text-decoration: line-through;
   color: #999;
+  opacity: 0.7;
+  transition: color 0.3s ease;
 }
 
 .icon {
-  font-size: 1.2rem;
-  color: #333;
+  font-size: 1.7rem;
+  color: #a132fe; /* purple color */
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.3s ease, color 0.3s ease;
+  user-select: none;
 }
 
 .icon:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
+  color: #6e00d9;
 }
 
-input[type="text"] {
-  width: 93%;
-  padding: 12px 15px;
+.checkbox .icon {
+  color: #a132fe;
+  font-size: 22px;
+}
+
+/* Trash icon hover change to pink */
+.todo-item > div:last-child .icon:hover {
+  color: #e91e63;
+  transform: scale(1.4);
+}
+
+/* Inputs */
+input[type="text"],
+input[type="datetime-local"] {
+  width: 100%;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+  margin-left: -13px;
   border: none;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  font-size: 1rem;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  font-size: 1.1rem;
+  background: #e5dbfb;
+  color: #3c1b95;
+  box-shadow: inset 0 2px 6px rgba(161, 50, 254, 0.4);
+  transition: box-shadow 0.3s ease;
 }
 
+input[type="text"]:focus,
+input[type="datetime-local"]:focus {
+  outline: none;
+  box-shadow: 0 0 12px #a132fe;
+}
+
+/* Buttons */
 button {
   width: 100%;
-  padding: 12px;
-  background-color: #6c63ff;
-  color: white;
+  padding: 16px 0;
+  background-color: #a132fe;
+  color: #fff;
   border: none;
-  border-radius: 12px;
-  font-size: 1rem;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 10px 20px rgba(161, 50, 254, 0.5);
+  user-select: none;
+  margin-top: 12px;
 }
 
 button:hover {
-  background-color: #574b90;
+  background-color: #6e00d9;
 }
 
+/* No record text */
 .no-record {
   text-align: center;
-  color: #777;
-  font-size: 1.1rem;
+  color: #bb99ff;
+  font-size: 1.3rem;
+  margin-top: 30px;
 }
